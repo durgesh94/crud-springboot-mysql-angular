@@ -1,0 +1,208 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringBootAPI",
+		"_postman_id": "816c4622-aa5e-b786-c00f-d34bd4aec7f9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ticket/getTickets",
+			"request": {
+				"url": "http://localhost:8080/ticket/getTickets",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ticket/bookTickets",
+			"request": {
+				"url": "http://localhost:8080/ticket/bookTickets",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"amount\": 2000,\n\t\t\"catagory\": \"Java\"\n\t},\n\t{\n\t\t\"amount\": 5000,\n\t\t\"catagory\": \"Python\"\n\t}\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ticket/getTicket/4",
+			"request": {
+				"url": "http://localhost:8080/ticket/getTicket/4",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ticket/bookTicket",
+			"request": {
+				"url": "http://localhost:8080/ticket/bookTicket",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 25000,\n    \"catagory\": \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ticket/deleteTicket/1",
+			"request": {
+				"url": "http://localhost:8080/ticket/deleteTicket/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ticket/updateTicket",
+			"request": {
+				"url": "http://localhost:8080/ticket/updateTicket",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 2,\n    \"amount\": 25000,\n    \"catagory\": \"test test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "manager/register",
+			"request": {
+				"url": "http://localhost:8080/manager/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\": \"Durgesh\",\n\t\"lastname\": \"Tambe\",\n\t\"email\": \"dntambe1@gmail.com\",\n\t\"password\": \"durgesh123\",\n\t\"address\": \"Kothrud, Pune\",\n\t\"company\": \"MB\",\n\t\"dob\": \"1994-06-17\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "manager/login/dntambe@gmail.com/durgesh123",
+			"request": {
+				"url": "http://localhost:8080/manager/login/dntambe@gmail.com/durgesh123",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "employee/getEmployees",
+			"request": {
+				"url": "http://localhost:8080/employee/getEmployees",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "employee/getEmployee/8",
+			"request": {
+				"url": "http://localhost:8080/employee/getEmployee/9",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "employee/addEmployee",
+			"request": {
+				"url": "http://localhost:8080/employee/addEmployee",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\": \"Adesh\",\n\t\"lastname\": \"Sawant\",\n\t\"email\": \"adesh@gmail.com\",\n\t\"address\": \"Kothrud\",\n\t\"city\": \"Pune\",\n\t\"mobile\": \"9096978887\",\n\t\"dob\": \"1994-06-17\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "employee/updateEmployee",
+			"request": {
+				"url": "http://localhost:8080/employee/updateEmployee",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 9,\n\t\"firstname\": \"Durgesh\",\n\t\"lastname\": \"Tambe\",\n\t\"email\": \"dntambe@gmail.com\",\n\t\"address\": \"Kothrud\",\n\t\"city\": \"Pune\",\n\t\"mobile\": \"9096978887\",\n\t\"dob\": \"1994-06-17\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "employee/deleteEmployee/9",
+			"request": {
+				"url": "http://localhost:8080/employee/deleteEmployee/9",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

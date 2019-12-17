@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <h3 class="mr-5">
+            Welcome {{user}}
+        </h3>
+        <h3>
+            <button type="button" class="btn btn-success" (click)="open(0)">ADD</button>
+        </h3>
+        <h3>
+            <button type="button" class="btn btn-info ml-5" routerLink="/login">Logout</button>
+        </h3>
+    </div>
+    <div *ngIf="empList.length == 0">
+        Employee list is empty. Please create your emp list.
+    </div>
+    <table class="table" *ngIf="empList.length > 0">
+        <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Mobile</th>
+                <th>DOB</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empList">
+                <td>{{emp?.firstname}} {{emp?.lastname}}</td>
+                <td>{{emp?.email}}</td>
+                <td>{{emp?.address}}</td>
+                <td>{{emp?.city}}</td>
+                <td>{{emp?.mobile}}</td>
+                <td>{{emp?.dob | date}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary" (click)="open(emp.id)">Edit</button>
+                    <button type="button" class="btn btn-danger ml-2" (click)="onDelete(emp.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
